@@ -1,0 +1,40 @@
+
+ANALYSIS AND OBSERVATIONS
+==========================
+
+1. BEST MODEL
+   Random Forest achieved the highest performance across all four
+   evaluation metrics — Accuracy: 91.25%,
+   Precision: 92.11%, Recall: 89.74%,
+   F1 Score: 90.91%. It is selected as the final model
+   for deployment in the prediction application.
+
+2. LOGISTIC REGRESSION — BASELINE
+   Logistic Regression performed better than Decision Tree with an
+   accuracy of 87.50% and F1 of 86.84%.
+   This is because the dataset contains a strong linear signal
+   (competition and marketing budget), which LR captures well.
+   However, it cannot model non-linear interaction effects, which
+   limits its ceiling compared to ensemble methods.
+
+3. DECISION TREE — OVERFITTING DEMONSTRATED
+   The unlimited Decision Tree achieved 100% training accuracy but
+   only 85.0% test accuracy — a gap of 15%, confirming overfitting.
+   After pruning to max_depth=5, the training accuracy dropped to
+   94.7% while test accuracy remained at 85.0%, reducing the gap
+   to 9.7%. This demonstrates that pruning successfully reduces
+   overfitting in Decision Trees.
+
+4. RANDOM FOREST — ENSEMBLE ADVANTAGE
+   Random Forest improved test accuracy to 91.25%
+   by training 100 Decision Trees on random subsets of data and
+   combining their votes. This variance reduction technique overcomes
+   the limitation of a single Decision Tree and captures non-linear
+   interaction effects that Logistic Regression cannot model.
+
+5. FEATURE IMPORTANCE INSIGHT
+   Random Forest identified competition level and marketing budget
+   as the two strongest predictors of product launch success.
+   Product category ranked lowest in importance, confirming that
+   what type of product you launch matters far less than how
+   competitive your market is and how strongly you promote it.
