@@ -3,7 +3,7 @@
 A machine learning system that predicts whether a product launch will succeed or fail based on 6 business parameters.
 
 ## Live Demo
-👉 [Click here to try the app](YOUR_STREAMLIT_URL_HERE)
+👉 [Click here to try the app](https://success-launch-predictor.streamlit.app/)
 
 ## Model Performance
 | Model | Accuracy | F1 Score |
